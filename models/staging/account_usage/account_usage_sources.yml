@@ -1,0 +1,11 @@
+version: 2
+
+
+sources:
+  - name: account_usage
+    description: Snowflake account usage data such as query history.
+    database: snowflake
+    schema: account_usage
+    tables:
+      - name: query_history
+        description: Query history

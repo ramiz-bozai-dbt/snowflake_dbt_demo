@@ -1,0 +1,11 @@
+version: 2
+
+
+sources:
+  - name: jaffle_shop
+    description: Jaffle shop data.
+    database: ramiz_bozai_sandbox
+    schema: jaffle_shop
+    tables:
+      - name: orders
+        description: Qrder data from the jaffle shop.
