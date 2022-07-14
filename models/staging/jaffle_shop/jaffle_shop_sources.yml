@@ -8,4 +8,4 @@ sources:
     schema: jaffle_shop
     tables:
       - name: orders
-        description: Qrder data from the jaffle shop.
+        description: Order data from the jaffle shop.
