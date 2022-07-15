@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: stg_account_usage
+    description: Account usage data from snowflake.
+    columns:
+      - name: query_id
+        description: Unique ID of the query.
+        tests:
+            - unique
+            - not_null
+
+      - name: query_text
+        description: Query statement.
+        tests:
+            - not_null
+
+      - name: database_id
+        description: Database of the query.
+
+      - name: database_name
+        description: Name of the database.
+
+      - name: schema_id
+        description: Name of the schema.
+
+      - name: user_name
+        description: User who executed the query.
+
+      - name: start_time
+        description: Start time of the query.
+
+      - name: end_time
+        description: End time of the query.
+
+      - name: execution_time
+        description: Execution time for the query.
