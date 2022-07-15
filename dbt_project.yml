@@ -2,12 +2,12 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'tpch'
+name: 'ramiz_sandbox_project'
 version: '1.0.0'
 config-version: 2
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'tpch'
+profile: 'ramiz_sandbox_project'
 
 # These configurations specify where dbt should look for different types of files.
 # The `source-paths` config, for example, states that models in this project can be
@@ -44,8 +44,7 @@ vars:
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
 models:
-  
-  tpch:
+  ramiz_sandbox_project:
     staging:
       +materialized: view
 
@@ -57,7 +56,7 @@ models:
     enabled: true
       
 seeds:
-  tpch:
+  ramiz_sandbox_project:
     snowflake_contract_rates:
       +column_types:
         effective_date: DATE
