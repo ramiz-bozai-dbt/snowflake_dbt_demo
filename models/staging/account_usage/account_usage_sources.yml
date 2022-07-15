@@ -9,3 +9,5 @@ sources:
     tables:
       - name: query_history
         description: Query history
+
+        

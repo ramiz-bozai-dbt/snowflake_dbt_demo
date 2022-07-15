@@ -1,0 +1,37 @@
+version: 2
+
+
+sources:
+  - name: weathersource
+    description: Daily weather data from NY
+    database: weathersource_snowflake_snowpark_tile_snowflake_secure_share_1651768630709
+    schema: onpoint_id
+    tables:
+      - name: forecast_day
+        description: Daily forecast data.
+
+        columns:
+          - name: postal_code
+            description: Postal code of data
+          - name: country
+            description: Country of data
+          - name: time_init_utc
+            description: Date when data was first loaded
+          - name: date_valid_std
+            description: Forecast date      
+          - name: probability_of_precipitation
+            description: The probability of precipitation on that day.   
+
+      - name: history_day
+        description: Historical actual weather data.
+
+        columns:
+          - name: postal_code
+            description: Postal code of data
+          - name: country
+            description: Country of data
+          - name: date_valid_std
+            description: Forecast date      
+          - name: tot_precipitation_mm
+            description: The amount of precipitation on that day.   
+            
