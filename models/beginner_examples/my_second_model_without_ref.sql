@@ -4,4 +4,4 @@
 select
     easy_math * 2 as hard_math
     
-from {{ ref('my_first_model') }} --Good practice
+from ramiz_bozai_sandbox_dev.dbt_rbozai.my_first_model --Not portable!
