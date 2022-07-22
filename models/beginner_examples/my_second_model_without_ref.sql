@@ -1,4 +1,4 @@
---This is my second model.
+--This is my second model, but I didn't follow best practices using the ref function.
 --It builds upon my_first_model.
 
 select
