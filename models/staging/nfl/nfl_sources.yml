@@ -1,0 +1,12 @@
+version: 2
+
+
+sources:
+  - name: nfl
+    description: NFL data from the 2021 season.
+    database: nfl_data
+    schema: public
+    tables:
+      - name: passing_stats
+        description: Passing data from the 2021 season.
+

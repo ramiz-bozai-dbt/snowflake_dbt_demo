@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_passing_stats
+    description: Passing statistics from the 2021 season.
+    columns:
+      - name: player_name
+        description: Name of player.
+        tests:
+            - unique
+            - not_null
+
+      - name: age
+        description: Age of player at season end.
+        tests:
+            - not_null
+
+      - name: position
+        description: Default player position.
+
+      - name: completions
+        description: Number of passing completions.
+
+      - name: attempts
+        description: Number of passing attempts.
+
+      - name: yards
+        description: Number of passing yards.
+
+      - name: td
+        description: Number of passing touchdowns.

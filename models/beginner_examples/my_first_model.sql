@@ -1,5 +1,7 @@
 --This is my very first model.
---This model will be defined as a table in my warehouse.
 
 select
-    1/1 as easy_math
+    *,
+    completions/attempts as completion_pct --Let's calculate the completion rate.
+
+from {{ ref('stg_passing_stats') }}
