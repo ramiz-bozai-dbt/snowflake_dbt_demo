@@ -1,4 +1,4 @@
 {{ codegen.generate_base_model(
-    source_name='jaffle_shop',
-    table_name='orders'
+    source_name='nfl',
+    table_name='passing_stats'
 ) }}
