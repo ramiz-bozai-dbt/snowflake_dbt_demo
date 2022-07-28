@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: stg_passing_stats
-    description: Passing statistics from the 2021 season.
+    description: '{{ doc("stg_passing_stats") }}'
     columns:
       - name: player_name
         description: Name of player.
