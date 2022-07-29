@@ -1,0 +1,31 @@
+version: 2
+
+exposures:
+  - name: passing_stats_dashboard
+    description: |
+      # Details on my dashboard
+      ============
+      Paragraphs are separated by a blank line.
+      2nd paragraph. *Italic*, **bold**, and `monospace`
+      Itemized lists look like:
+        * this one
+        * that one
+        * the other one
+    
+    # type could be {dashboard, notebook, analysis, ml, application}
+    type: dashboard 
+    
+    # this is just a link to the thing itself for click through from documentation
+    url: https://public.tableau.com/authoring/Attemptsvs_Completion2021Season/Dashboard1#1
+    
+    # convenience feature - relative scale of {high, medium, low}
+    maturity: high
+    
+    # documentation purposes for point of contact if stuff breaks
+    owner:
+      name: Hall of Fame BI Analyst
+      email: halloffamer@getdbt.com
+    
+    # IMPORTANT: determines the lineage relationship of the exposure construct to the rest of your DAG
+    depends_on:
+      - ref('my_first_model')
