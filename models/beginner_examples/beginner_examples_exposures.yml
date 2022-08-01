@@ -23,8 +23,8 @@ exposures:
     
     # documentation purposes for point of contact if stuff breaks
     owner:
-      name: Hall of Fame BI Analyst
-      email: halloffamer@getdbt.com
+      name: Patrick Mahomes
+      email: halloffamer@nfl.com
     
     # IMPORTANT: determines the lineage relationship of the exposure construct to the rest of your DAG
     depends_on:

@@ -1,6 +1,6 @@
 with source as (
 
-    select * from {{ source('nfl', 'passing_stats') }}
+    select * from {{ source('nfl', 'passing_stats') }} --We are using jinja here.
 
 ),
 
