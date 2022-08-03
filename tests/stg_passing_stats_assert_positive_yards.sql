@@ -1,6 +1,6 @@
 {{
     config(
-        severity='warn'
+        severity='error'
     )
 }}
 
