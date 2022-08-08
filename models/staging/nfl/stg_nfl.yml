@@ -12,7 +12,6 @@ models:
       - name: player_name
         description: Name of player.
         tests:
-            - unique
             - not_null
             - dbt_expectations.expect_column_to_exist
 
