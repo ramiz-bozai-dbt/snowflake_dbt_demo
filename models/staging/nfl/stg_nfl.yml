@@ -4,7 +4,7 @@ models:
   - name: stg_passing_stats
     description: '{{ doc("stg_passing_stats") }}'
     columns:
-      - name: year
+      - name: season_year
         description: Season of record.
         tests:
             - not_null

@@ -7,7 +7,7 @@ with source as (
 renamed as (
 
     select
-        year,
+        to_date(year, 'YYYY') as season_year,
         player as player_name,
         age,
         pos as position,
