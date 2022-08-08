@@ -1,0 +1,21 @@
+version: 2
+
+metrics:
+  - name: avg_completion_rate
+    label: Average Completion Rate
+    model: ref('my_first_model')
+    description: "The average completion rate by season.  Only calculated for players officially listed at the QB position."
+
+    type: average
+    sql: completion_pct
+
+    timestamp: season_year
+    time_grains: [year]
+
+    dimensions:
+      - season_year  
+
+    filters:
+      - field: position
+        operator: 'in'
+        value: "('qb', 'QB')"
