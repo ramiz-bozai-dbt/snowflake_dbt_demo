@@ -19,5 +19,5 @@ renamed as (
     from source
 
 )
-
+--my comment
 select * from renamed
