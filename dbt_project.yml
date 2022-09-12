@@ -79,9 +79,6 @@ models:
       weathersource:
         +materialized: view      
         +schema: stg_weathersource                       
-    
-      snowflake_spend:
-        enabled: true
       
 seeds:
   ramiz_snowflake_github_demo:
