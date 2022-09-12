@@ -49,30 +49,36 @@ models:
 
     demo_examples:
       +materialized: table
+      +schema: demo_examples
 
     marts:
       aggregates:
         +materialized: table
+        +schema: marts
       core:
         +materialized: table
+        +schema: marts        
       intermediate:
-        +materialized: table            
+        +materialized: table
+        +schema: marts                    
 
     staging:
       account_usage:
         +materialized: view
+        +schema: stg_account_usage            
       jaffle_shop:
         +materialized: view
+        +schema: stg_jaffle_shop        
       nfl:
         +materialized: view  
+        +schema: stg_nfl        
         +tags: ['sports'] 
       tpch:
         +materialized: view   
+        +schema: stg_tpch        
       weathersource:
-        +materialized: view                     
-    
-      snowflake_spend:
-        enabled: true
+        +materialized: view      
+        +schema: stg_weathersource                       
       
 seeds:
   ramiz_snowflake_github_demo:
