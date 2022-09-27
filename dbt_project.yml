@@ -78,7 +78,10 @@ models:
         +schema: stg_tpch        
       weathersource:
         +materialized: view      
-        +schema: stg_weathersource                       
+        +schema: stg_weathersource     
+
+  metrics:                          
+      +schema: metrics
       
 seeds:
   ramiz_snowflake_github_demo:
