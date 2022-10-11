@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: Env1
     steps:
     - uses: actions/checkout@master
     - uses: jakejarvis/s3-sync-action@master
