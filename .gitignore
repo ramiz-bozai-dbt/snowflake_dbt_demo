@@ -1,6 +1,7 @@
 target/*
 !target/run_results.json
 !target/catalog.json
+!target/manifest.json
 dbt_modules/
 dbt_packages/
 logs/
