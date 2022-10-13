@@ -1,5 +1,6 @@
-target/compiled
-target/run
+target/*
+!target/run_results.json
+!target/catalog.json
 dbt_modules/
 dbt_packages/
 logs/
