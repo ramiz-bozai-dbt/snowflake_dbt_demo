@@ -7,9 +7,9 @@ def model(dbt, session):
     upstream_model = dbt.ref("stg_passing_stats")
     
     # Calculate completion rate
-    #upstream_model_calculated = dbt.source("upstream_source_name", "table_name")
+    upstream_model_df = upstream_model.to_pandas()
     
+    upstream_model_df["completion_rate"] = upstream_model_df["COMPLETIONS"] / upstream_model_df["ATTEMPTS"]
     
-    pd_upstream = upstream_model.to_pandas()
 
-    return pd_upstream
+    return upstream_model_df
