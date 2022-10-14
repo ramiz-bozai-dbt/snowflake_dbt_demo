@@ -1,7 +1,5 @@
-  select *
-  from 
-  {{ metrics.calculate(
-      metric_name = 'avg_completion_rate',
-      grain = 'year'
-  )
-  }}
+select *
+from {{ metrics.calculate(
+		metric('avg_completion_rate'),
+		grain='year',
+) }}
