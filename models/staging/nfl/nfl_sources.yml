@@ -3,20 +3,16 @@ version: 2
 sources:
   - name: nfl
     description: NFL data from the 2021 season.
+    freshness:
+      warn_after:
+        count: count
+        period: period
+      error_after:
+        count: err_count
+        period: err_period
+    loaded_at_field: loaded_at_field
     database: nfl_data
     schema: public
     tables:
       - name: passing_stats
         description: Passing data from the 2021 season.
-
-  - name: nfl_prod
-    database: nfl_data_prod
-    schema: public
-    tables: &tables
-      - name: passing_stats
-        description: Passing data from the 2021 season.
-
-  - name: nfl_dev
-    database: nfl_data_dev
-    schema: public
-    tables: *tables
