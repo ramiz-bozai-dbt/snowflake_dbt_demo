@@ -4,7 +4,7 @@ select
     *,
     completions/attempts as completion_pct --Let's calculate the completion rate.
 
-from {{ ref('stg_passing_stats') }}
+from ramiz_bozai_sandbox_dev.dbt_rbozai.stg_passing_stats
 --
 --
 --
