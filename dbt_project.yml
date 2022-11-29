@@ -79,6 +79,9 @@ models:
       weathersource:
         +materialized: view      
         +schema: stg_weathersource     
+  
+  elementary:
+    +schema: 'elementary'
 
   metrics:                          
       +schema: metrics
