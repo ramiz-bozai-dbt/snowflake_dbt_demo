@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_shooting_stats
+    description: '{{ doc("stg_shooting_stats") }}'
+    columns:
+      - name: player
+        description: "Name of player"
+        tests:
+            - not_null
+
+      - name: squad
+        description: "Name of squad player belongs to"
+        tests:
+            - not_null
+
+      - name: age
+        description: "Age of player"
+
+      - name: goals
+        description: "Number of goals scored"
+        tests:    
+            - dbt_expectations.expect_column_values_to_be_of_type:
+                column_type: integer        
+
+      - name: shots
+        description: "Number of shots taken"
+
+      - name: free_kicks
+        description: "Number of free kicks attempted"

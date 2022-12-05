@@ -60,7 +60,11 @@ models:
         +schema: marts        
       intermediate:
         +materialized: table
-        +schema: marts                    
+        +schema: marts 
+
+    sports:
+      +materialized: table
+      +schema: sports                           
 
     staging:
       account_usage:
@@ -68,7 +72,11 @@ models:
         +schema: stg_account_usage            
       jaffle_shop:
         +materialized: view
-        +schema: stg_jaffle_shop        
+        +schema: stg_jaffle_shop 
+      mls:
+        +materialized: view  
+        +schema: stg_mls        
+        +tags: ['sports']          
       nfl:
         +materialized: view  
         +schema: stg_nfl        
@@ -79,9 +87,6 @@ models:
       weathersource:
         +materialized: view      
         +schema: stg_weathersource     
-  
-  elementary:
-    +schema: 'elementary'
 
   metrics:                          
       +schema: metrics
