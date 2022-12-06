@@ -2,8 +2,7 @@ version: 2
 
 exposures:
   - name: shooting_stats_dashboard
-    description: |
-      This dashboard contains data on shots taken and plots it against goal efficiency.
+    description: This dashboard contains data on shots taken and plots it against goal efficiency.
     
     # type could be {dashboard, notebook, analysis, ml, application}
     type: dashboard 
