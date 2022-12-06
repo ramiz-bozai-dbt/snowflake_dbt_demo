@@ -1,0 +1,24 @@
+version: 2
+
+exposures:
+  - name: shooting_stats_dashboard
+    description: |
+      This dashboard contains data on shots taken and plots it against goal efficiency.
+    
+    # type could be {dashboard, notebook, analysis, ml, application}
+    type: dashboard 
+    
+    # this is just a link to the thing itself for click through from documentation
+    url: https://public.tableau.com/views/Shotsvs_GoalsPerShotfrom2022MLSSeason/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link
+    
+    # convenience feature - relative scale of {high, medium, low}
+    maturity: high
+    
+    # documentation purposes for point of contact if stuff breaks
+    owner:
+      name: Landon Donovan
+      email: halloffamer@mls.com
+    
+    # IMPORTANT: determines the lineage relationship of the exposure construct to the rest of your DAG
+    depends_on:
+      - ref('shooting_efficiency')
