@@ -14,7 +14,7 @@
     
     {%- elif target.name == 'slim_ci' -%}
 
-        {{ slim_ci_temp }}
+        {{ 'slim_ci_temp' }}
 
     {%- else -%}
 
