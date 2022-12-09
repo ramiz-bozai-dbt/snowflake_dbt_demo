@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: my_first_model
+    description: "Testing out a description"
+    columns:
+      - name: player_name
+        description: "Name of player"
+        tests:
+            - not_null
+      - name: season_year
+        description: "Year of playing season"
+        tests:
+            - not_null            
