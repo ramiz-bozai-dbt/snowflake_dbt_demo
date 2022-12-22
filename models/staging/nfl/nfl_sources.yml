@@ -8,7 +8,7 @@ sources:
     tables:
       - name: passing_stats
         description: Passing data from the 2021 season.
-        freshness: # make this a warning as this is static data
-          warn_after: {count: 6, period: hour}
-          # error_after: {count: 12, period: hour}
-        loaded_at_field: o_orderdate::timestamp
+        freshness:
+          warn_after: {count: 6, period: days}
+          error_after: {count: 12, period: days}
+        loaded_at_field: loaded_at::timestamp_ntz      

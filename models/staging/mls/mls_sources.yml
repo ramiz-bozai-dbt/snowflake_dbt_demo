@@ -8,3 +8,7 @@ sources:
     tables:
       - name: shooting_stats
         description: Shooting data from the 2022 season.
+        freshness: 
+          warn_after: {count: 6, period: hours}
+          error_after: {count: 12, period: hours}
+        loaded_at_field: loaded_at::timestamp_ntz        
