@@ -6,4 +6,5 @@ select
 --
 --
 --
+--
 from {{ ref('stg_shooting_stats') }}
