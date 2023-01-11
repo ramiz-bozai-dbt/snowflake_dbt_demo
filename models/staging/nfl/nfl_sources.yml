@@ -6,7 +6,7 @@ sources:
     database: nfl_data
     schema: public
     freshness: # default freshness
-      warn_after: {count: 700, period: day}
+      warn_after: {count: 5, period: day}
       error_after: {count: 1000, period: day}
     loaded_at_field: loaded_at   
 
