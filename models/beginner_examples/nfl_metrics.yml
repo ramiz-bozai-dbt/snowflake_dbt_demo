@@ -19,3 +19,22 @@ metrics:
       - field: position
         operator: 'in'
         value: "('qb', 'QB')"
+
+  - name: avg_completion_rate_by_age_group
+    label: Average Completion Rate by Age Group
+    model: ref('my_first_model')
+    description: "The average completion rate sliced by age group.  Only calculated for players officially listed at the QB position."
+
+    type: average
+    sql: completion_pct
+
+    timestamp: season_year
+    time_grains: [year]
+
+    dimensions:
+      - age_bucket  
+
+    filters:
+      - field: position
+        operator: 'in'
+        value: "('qb', 'QB')"        
