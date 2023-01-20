@@ -6,11 +6,13 @@
 
         {{ custom_schema_name | trim }}
 
-    
+    {%- elif target.name == 'sl' -%}
+
+        {{ custom_schema_name | trim }}        
+
     {%- elif target.name == 'dev' -%}
 
         {{ default_schema}}        
-
     
     {%- elif target.name == 'slim_ci' -%}
 
