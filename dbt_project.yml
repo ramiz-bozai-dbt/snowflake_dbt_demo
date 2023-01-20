@@ -45,7 +45,7 @@ models:
   ramiz_snowflake_github_demo:
     beginner_examples:
       +materialized: table
-      +schema: default
+      +schema: beginner_examples
 
     demo_examples:
       +materialized: table
