@@ -16,7 +16,7 @@ exposures:
     type: dashboard 
     
     # this is just a link to the thing itself for click through from documentation
-    url: https://public.tableau.com/authoring/Attemptsvs_Completion2021Season/Dashboard1
+    url: https://public.tableau.com/app/profile/ramiz.bozai/viz/Attemptsvs_Completion2021Season/Dashboard1
     
     # convenience feature - relative scale of {high, medium, low}
     maturity: high
