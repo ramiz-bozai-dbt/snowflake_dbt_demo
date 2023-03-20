@@ -16,6 +16,9 @@ models:
 
       - name: age
         description: "Age of player"
+        tests:
+            - dbt_utils.expression_is_true:
+                expression: "> 25"
 
       - name: goals
         description: "Number of goals scored"
