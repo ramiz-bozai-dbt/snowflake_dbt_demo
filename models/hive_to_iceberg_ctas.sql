@@ -6,7 +6,7 @@
         'bird_feeder_id, feed_type, bird_type', 
         'ORC', 
         'iceberg', 
-        's3://yusuf-cattaneo-bootcamp-nov2022/kaggle/blog_posts/bird_feeder_iceberg_dbt/'
+        'blank'
     )"
 
 ) }}
