@@ -4,6 +4,7 @@ select
     *,
     1 as test,
     2 as new_col,
+    3 as test_col,
     completions/attempts as completion_pct, --Let's calculate the completion rate.
     case
         when age between 20 and 23 then '20-23'
