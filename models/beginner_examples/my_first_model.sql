@@ -6,6 +6,7 @@ select
     2 as new_col,
     3 as test_col,
     4 as tested_col,
+    5 as another_sample_column,
     --Let's calculate the completion rate.
     completions / attempts as completion_pct,
     case
