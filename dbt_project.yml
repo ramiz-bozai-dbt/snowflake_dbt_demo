@@ -30,6 +30,7 @@ on-run-start:
 #  - '{{create_udfs()}}' # comment / uncomment this line to build UDFs called in the create_udfs macro
 #
 on-run-end:
+  - "{% if target.name == 'prod' %}{{ dbt_artifacts.upload_results(results) }}{% endif %}"
 #  - "alter warehouse transforming set warehouse_size=xsmall;"
 #  - "{{ grant_all_on_schemas(schemas, 'transformer') }}"
 
