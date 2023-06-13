@@ -11,4 +11,5 @@ models:
       - name: season_year
         description: "Year of playing season"
         tests:
-            - not_null            
+            - not_null  
+              
