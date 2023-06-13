@@ -1,6 +1,7 @@
 with source as (
 
-    select * from {{ source('nfl', 'passing_stats') }} --We are using jinja here.
+    --We are using jinja here.
+    select * from {{ source('nfl', 'passing_stats') }}
 
 ),
 
@@ -8,7 +9,8 @@ renamed as (
 
     select
         to_date(year, 'YYYY') as season_year,
-        player as player_name,
+        regexp_replace(player, '[^a-zA-Z0-9 ]', '') as player_name,
+        tm as team,
         age,
         pos as position,
         cmp as completions,
@@ -19,5 +21,6 @@ renamed as (
     from source
 
 )
+
 --my comment
 select * from renamed

@@ -13,3 +13,6 @@ select
         as age_bucket
 
 from {{ ref('stg_passing_stats') }}
+
+--Not sure what this filter does, but let's keep it. --Pat
+where team not ilike '%KAN%'
