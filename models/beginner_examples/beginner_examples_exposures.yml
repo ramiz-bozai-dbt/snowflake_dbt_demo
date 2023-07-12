@@ -22,4 +22,3 @@ exposures:
     # IMPORTANT: determines the lineage relationship of the exposure construct to the rest of your DAG
     depends_on:
       - ref('my_first_model')
-      - source('nfl', 'passing_stats')
