@@ -1,3 +1,9 @@
+{{
+    config(
+        tags='nfl_sports'
+    )
+}}
+
 --This is my very first model.
 
 select
