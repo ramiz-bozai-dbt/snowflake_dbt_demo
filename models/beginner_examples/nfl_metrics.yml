@@ -1,40 +1,40 @@
-version: 2
+# version: 2
 
-metrics:
-  - name: avg_completion_rate
-    label: Average Completion Rate
-    model: ref('my_first_model')
-    description: "The average completion rate by season.  Only calculated for players officially listed at the QB position."
+# metrics:
+#   - name: avg_completion_rate
+#     label: Average Completion Rate
+#     model: ref('my_first_model')
+#     description: "The average completion rate by season.  Only calculated for players officially listed at the QB position."
 
-    type: average
-    sql: completion_pct
+#     type: average
+#     sql: completion_pct
 
-    timestamp: season_year
-    time_grains: [year]
+#     timestamp: season_year
+#     time_grains: [year]
 
-    dimensions:
-      - season_year  
+#     dimensions:
+#       - season_year  
 
-    filters:
-      - field: position
-        operator: 'in'
-        value: "('qb', 'QB')"
+#     filters:
+#       - field: position
+#         operator: 'in'
+#         value: "('qb', 'QB')"
 
-  - name: avg_completion_rate_by_age_group
-    label: Average Completion Rate by Age Group
-    model: ref('my_first_model')
-    description: "The average completion rate sliced by age group.  Only calculated for players officially listed at the QB position."
+#   - name: avg_completion_rate_by_age_group
+#     label: Average Completion Rate by Age Group
+#     model: ref('my_first_model')
+#     description: "The average completion rate sliced by age group.  Only calculated for players officially listed at the QB position."
 
-    type: average
-    sql: completion_pct
+#     type: average
+#     sql: completion_pct
 
-    timestamp: season_year
-    time_grains: [year]
+#     timestamp: season_year
+#     time_grains: [year]
 
-    dimensions:
-      - age_bucket  
+#     dimensions:
+#       - age_bucket  
 
-    filters:
-      - field: position
-        operator: 'in'
-        value: "('qb', 'QB')"        
+#     filters:
+#       - field: position
+#         operator: 'in'
+#         value: "('qb', 'QB')"        
