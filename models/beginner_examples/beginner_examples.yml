@@ -12,3 +12,8 @@ models:
         description: "Year of playing season"
         tests:
             - not_null
+      - name: team
+        description: "The team a player was on in a given season."
+        tests:
+          - dbt_utils.at_least_one:
+              where: "team = 'KAN'"             
