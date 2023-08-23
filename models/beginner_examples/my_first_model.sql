@@ -3,10 +3,6 @@
 
 select
     *,
-    1 as test,
-    2 as new_test,
-    3 as todays_test,
-    --
     --Let's calculate the completion rate.
     completions / attempts as completion_pct,
     case
@@ -18,3 +14,6 @@ select
         as age_bucket
 
 from {{ ref('stg_passing_stats') }}
+
+--Not sure what this filter does, but let's keep it. -Pat
+where team not ilike '%KAN%'
