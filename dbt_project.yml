@@ -47,9 +47,6 @@ models:
       account_usage:
         +materialized: view
         +schema: stg_account_usage            
-      jaffle_shop:
-        +materialized: view
-        +schema: stg_jaffle_shop 
       mls:
         +materialized: view  
         +schema: stg_mls        
