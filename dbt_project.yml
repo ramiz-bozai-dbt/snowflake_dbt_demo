@@ -39,21 +39,6 @@ models:
       +materialized: table
       +schema: beginner_examples
 
-    demo_examples:
-      +materialized: table
-      +schema: demo_examples
-
-    marts:
-      aggregates:
-        +materialized: table
-        +schema: marts
-      core:
-        +materialized: table
-        +schema: marts        
-      intermediate:
-        +materialized: table
-        +schema: marts 
-
     sports:
       +materialized: table
       +schema: sports                           
@@ -72,16 +57,7 @@ models:
       nfl:
         +materialized: view  
         +schema: stg_nfl        
-        +tags: ['sports'] 
-      tpch:
-        +materialized: view   
-        +schema: stg_tpch        
-      weathersource:
-        +materialized: view      
-        +schema: stg_weathersource     
-
-  metrics:                          
-      +schema: metrics
+        +tags: ['sports']    
       
 seeds:
   ramiz_snowflake_github_demo:
