@@ -17,3 +17,4 @@ models:
         tests:
           - dbt_utils.at_least_one:
               where: "team = 'KAN'"             
+##
