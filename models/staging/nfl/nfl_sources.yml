@@ -12,4 +12,4 @@ sources:
 
     tables:
       - name: passing_stats
-        description: Passing data from the 2021 season.
+        description: Passing data from the 2021 season.   
