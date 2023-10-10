@@ -38,6 +38,7 @@ models:
     beginner_examples:
       +materialized: table
       +schema: beginner_examples
+      +database: ramiz_bozai_sandbox_{{env_var('DBT_DATABASE')}}
 
     sports:
       +materialized: table
