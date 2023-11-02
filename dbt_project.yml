@@ -25,6 +25,9 @@ clean-targets:         # directories to be removed by `dbt clean`
     - "dbt_modules"
     - "dbt_packages"
 
+on-run-start:
+  - '{{create_udfs()}}'
+
 vars:
   start_date: '1999-01-01'
   test: 'false' # to trigger runs for unit testing - override in a CLI param in testing job
