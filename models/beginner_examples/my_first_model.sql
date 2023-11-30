@@ -4,6 +4,7 @@ select
     *,
     --Let's calculate the completion rate.
     --
+    -- comment for Onbe
     1 as test,
     completions / attempts as completion_pct,
     case
