@@ -3,9 +3,7 @@
 select
     *,
     --Let's calculate the completion rate.
-    --
-    -- comment for Onbe
-    1 as test,
+
     completions / attempts as completion_pct,
     case
         when age between 20 and 23 then '20-23'
@@ -13,10 +11,6 @@ select
         when age between 29 and 40 then '29-40'
         when age >= 41 then '40+'
     end
-        as age_bucket,
-    name
+        as age_bucket
 
 from {{ ref('stg_passing_stats') }}
-
---Not sure what this filter does, but let's keep it. -Pat
-where team not ilike '%KAN%'
