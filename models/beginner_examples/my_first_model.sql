@@ -3,7 +3,7 @@
 select
     *,
     --Let's calculate the completion rate.
-
+    --
     completions / attempts as completion_pct,
     case
         when age between 20 and 23 then '20-23'
@@ -11,6 +11,7 @@ select
         when age between 29 and 40 then '29-40'
         when age >= 41 then '40+'
     end
-        as age_bucket
+        as age_bucket,
+    name
 
 from {{ ref('stg_passing_stats') }}
