@@ -1,3 +1,11 @@
+{{
+    config(
+        materialized='dynamic_table',
+        target_lag='30 minutes',
+        snowflake_warehouse='TRANSFORMING'
+    )
+}}
+
 --This is my very first model.
 
 select
