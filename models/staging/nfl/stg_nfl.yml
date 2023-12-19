@@ -3,6 +3,10 @@ version: 2
 models:
   - name: stg_passing_stats
     description: '{{ doc("stg_passing_stats") }}'
+    meta:
+      atlan:
+        attributes: # 
+          ownerUsers: ["ramiz.bozai"] # 
     columns:
       - name: season_year
         description: Season of record.
