@@ -1,4 +1,4 @@
---This is my very first model.
+{% macro build_kan_first_model(team) %}
 
 select
     *,
@@ -14,3 +14,6 @@ select
 
 from {{ ref('stg_passing_stats') }}
 
+where team = '{{team}}'
+
+{% endmacro %}
