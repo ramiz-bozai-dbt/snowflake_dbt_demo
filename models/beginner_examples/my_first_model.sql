@@ -1,8 +1,3 @@
-{{
-    config(
-        on_run_start='{{ set_snowflake_ddl_collation("ramiz_test_collation" , "en-ci") }}'
-    )
-}}
 
 --This is my very first model.
 
