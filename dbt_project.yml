@@ -38,8 +38,14 @@ vars:
 
 models:
   ramiz_snowflake_github_demo:
+    accounts:
+      +materialized: table
+      +database: accounts_ramiz
+      +schema: this_schema
+    
     beginner_examples:
       +materialized: table
+      +database: beginner_examples_ramiz
       +schema: beginner_examples
 
     sports:
