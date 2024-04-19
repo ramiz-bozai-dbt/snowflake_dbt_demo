@@ -1,13 +1,18 @@
 {% macro generate_database_name(custom_database_name=none, node=none) -%}
 
-    {%- set default_database = target.database -%}
-    {%- if custom_database_name is none -%}
+    {%- set default_schema = target.schema -%}
+    
+    {%- if target.name == 'prod' and custom_database_name is not none -%}
 
-        {{ default_database }}
+        {{ custom_database_name | trim }}      
 
+    {%- elif target.name == 'dev' -%}
+
+        {{ default_database}}        
+    
     {%- else -%}
 
-        {{ custom_database_name | trim }}
+        {{ default_database }}
 
     {%- endif -%}
 
