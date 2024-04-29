@@ -8,6 +8,7 @@ with source as (
 renamed as (
 
     select
+    --
         tm as team,
         age,
         pos as position,
