@@ -1,3 +1,5 @@
+{% macro check_monday() %}
+    
 {% if execute %}
   {% set is_monday = is_it_monday() %}
   {% if not is_monday %}
@@ -5,3 +7,6 @@
     {% do raise_compiler_error("Halting job because it's not Monday.") %}
   {% endif %}
 {% endif %}
+
+
+{% endmacro %}
