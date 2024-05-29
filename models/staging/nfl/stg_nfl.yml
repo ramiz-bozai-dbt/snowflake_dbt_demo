@@ -21,7 +21,9 @@ models:
       - name: team
         description: The team the player was on that year.
         tests:
-            - not_null       
+            - not_null    
+            - dbt_utils.at_least_one:
+                where: "team = 'KAN'"
 
       - name: age
         description: Age of player at season end.

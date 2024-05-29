@@ -9,6 +9,7 @@ renamed as (
 
     select
     --
+    --
         tm as team,
         age,
         pos as position,
