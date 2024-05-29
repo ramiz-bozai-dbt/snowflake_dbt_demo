@@ -3,6 +3,7 @@
 
 select
     *,
+    --
     --Let's calculate the completion rate.
     completions / attempts as completion_pct,
     case
