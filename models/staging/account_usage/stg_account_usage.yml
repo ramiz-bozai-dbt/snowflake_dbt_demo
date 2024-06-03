@@ -6,13 +6,13 @@ models:
     columns:
       - name: query_id
         description: Unique ID of the query.
-        tests:
+        data_tests:
             - unique
             - not_null
 
       - name: query_text
         description: Query statement.
-        tests:
+        data_tests:
             - not_null
 
       - name: database_id
