@@ -6,7 +6,7 @@ models:
     columns:
       - name: season_year
         description: Season of record.
-        tests:
+        data_tests:
             - not_null
       
       - name: player_name
@@ -14,20 +14,20 @@ models:
         meta:
           contains_pii: true   
         tags: ['contains_pii'] 
-        tests:
+        data_tests:
             - not_null
             - dbt_expectations.expect_column_to_exist
 
       - name: team
         description: The team the player was on that year.
-        tests:
+        data_tests:
             - not_null    
             - dbt_utils.at_least_one:
                 where: "team = 'KAN'"
 
       - name: age
         description: Age of player at season end.
-        tests:
+        data_tests:
             - not_null
 
       - name: position

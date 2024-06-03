@@ -6,12 +6,12 @@ models:
     columns:
       - name: player
         description: "Name of player"
-        tests:
+        data_tests:
             - not_null
 
       - name: squad
         description: "Name of squad player belongs to"
-        tests:
+        data_tests:
             - not_null
 
       - name: age
