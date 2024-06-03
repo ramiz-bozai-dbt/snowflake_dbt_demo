@@ -4,7 +4,7 @@ use database {{target.database}};
 
 drop function if exists {{target.schema}}.area_of_circle(float);
 
-create function {{target.schema}}.area_of_circle(radius float)
+create or replace function {{target.schema}}.area_of_circle(radius float)
   returns float
   as
   $$
