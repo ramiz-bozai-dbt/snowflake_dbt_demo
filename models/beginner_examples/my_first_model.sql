@@ -3,6 +3,7 @@
 
 select
     *,
+    2 as another_test,
     --
     --Let's calculate the completion rate.
     completions / attempts as completion_pct,
