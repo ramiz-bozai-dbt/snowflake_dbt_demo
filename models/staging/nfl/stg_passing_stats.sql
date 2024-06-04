@@ -8,6 +8,7 @@ with source as (
 renamed as (
 
     select
+        md5(year || player) as id,
         tm as team,
         age,
         pos as position,
