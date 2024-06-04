@@ -9,14 +9,13 @@ renamed as (
 
     select
         md5(year || player) as id,
-        1 as test,
         tm as team,
         age,
         pos as position,
         cmp as completions,
         att as attempts,
         yds as yards,
-        td as touchdowns,
+        td,
         to_date(year, 'YYYY') as season_year,
         regexp_replace(player, '[^a-zA-Z0-9 ]', '') as player_name
 
