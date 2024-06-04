@@ -4,6 +4,10 @@ models:
   - name: stg_passing_stats
     description: '{{ doc("stg_passing_stats") }}'
     columns:
+      - name: id
+        description: A hashed, unique identifier of season year and player name.
+        data_tests:
+            - unique
       - name: season_year
         description: Season of record.
         data_tests:
