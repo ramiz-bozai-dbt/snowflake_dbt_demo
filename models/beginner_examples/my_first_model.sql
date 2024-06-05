@@ -12,15 +12,9 @@ select
         when age between 29 and 40 then '29-40'
         when age >= 41 then '40+'
     end
-        as age_bucket,
-    case
-        when year(season_year) > 2024 then 'Rookie'
-        else 'Seasoned Veteran'
-    end
-        as vintage
+        as age_bucket
 
 from {{ ref('stg_passing_stats') }}
-where position = 'QB'
 
 
 
