@@ -4,6 +4,10 @@ models:
   - name: my_first_model
     description: "Testing out a description"
     columns:
+      - name: id
+        description: A hashed, unique identifier of season year and player name.
+        data_tests:
+          - unique      
       - name: player_name
         description: "Name of player"
         data_tests:
