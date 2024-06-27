@@ -7,7 +7,9 @@ models:
       - name: id
         description: A hashed, unique identifier of season year and player name.
         data_tests:
-          - unique      
+          - unique
+          - not_null
+                
       - name: player_name
         description: "Name of player"
         data_tests:
