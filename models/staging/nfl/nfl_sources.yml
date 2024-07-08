@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: nfl
     description: NFL data from the 2021 season.
-    database: nfl_data
+    database: nfl_data_new
     schema: public
     freshness: # default freshness
       warn_after: { count: 5, period: day }

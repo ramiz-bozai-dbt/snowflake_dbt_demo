@@ -5,6 +5,7 @@ select
     *,
    --
    1 as test,
+   2 as another_test,
     --Let's calculate the completion rate.
     completions / attempts as completion_pct,
     case
@@ -16,5 +17,6 @@ select
         as age_bucket
 
 from {{ ref('stg_passing_stats') }}
+
 
 
