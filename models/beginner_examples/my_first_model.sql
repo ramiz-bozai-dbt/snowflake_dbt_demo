@@ -4,6 +4,7 @@
 select
     *,
     1 as test,
+    2 as another_column,
    --
     --Let's calculate the completion rate.
     completions / attempts as completion_pct,
