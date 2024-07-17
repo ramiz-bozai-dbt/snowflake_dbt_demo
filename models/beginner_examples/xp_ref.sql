@@ -1,2 +1,2 @@
 select *
-from {{ ref('ramiz_upstream_testing', 'ramiz_sample') }}
+from {{ ref('dbt_ramiz_upstream_testing', 'ramiz_sample') }}
