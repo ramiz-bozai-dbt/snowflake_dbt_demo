@@ -14,6 +14,7 @@ models:
         description: "Name of player"
         data_tests:
           - not_null
+          
       - name: season_year
         description: "Year of playing season"
         data_tests:
