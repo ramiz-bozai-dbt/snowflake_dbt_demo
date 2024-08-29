@@ -3,9 +3,6 @@
 
 select
     *,
-
-    1 as test,
-    2 as another_test_col,
    
     case
         when age between 20 and 23 then '20-23'
