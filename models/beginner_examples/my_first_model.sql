@@ -3,6 +3,7 @@
 
 select
     *,
+    1 as test,
    
     case
         when age between 20 and 23 then '20-23'
@@ -13,6 +14,4 @@ select
         as age_bucket
 
 from {{ ref('stg_passing_stats') }}
-
-
 
