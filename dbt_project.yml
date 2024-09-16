@@ -58,10 +58,4 @@ models:
         +materialized: view  
         +schema: stg_nfl        
         +tags: ['sports']    
-      
-seeds:
-  ramiz_snowflake_github_demo:
-    snowflake_contract_rates:
-      +column_types:
-        effective_date: DATE
-        rate: NUMBER   
+ 
