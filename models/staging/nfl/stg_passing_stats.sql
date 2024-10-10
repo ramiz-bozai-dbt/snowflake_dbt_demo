@@ -1,6 +1,6 @@
 with source as (
 
-    --We are using jinja here.
+    --We are using jinja here. --
     select * from {{ source('nfl', 'passing_stats') }}
 
 ),
