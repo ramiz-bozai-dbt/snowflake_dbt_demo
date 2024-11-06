@@ -12,5 +12,6 @@ select
         when age >= 41 then '40+'
     end
         as age_bucket
+        
 
 from {{ ref('stg_passing_stats') }}
