@@ -4,7 +4,7 @@ with source as (
     select * from {{ source('nfl', 'passing_stats') }}
 
 ),
-
+--
 renamed as (
 
     select
@@ -18,6 +18,7 @@ renamed as (
         td,
         to_timestamp(year, 'YYYY') as season_year,
         regexp_replace(player, '[^a-zA-Z0-9 ]', '') as player_name
+
 
     from source
 
