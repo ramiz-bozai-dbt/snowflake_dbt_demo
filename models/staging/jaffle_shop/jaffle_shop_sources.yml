@@ -4,7 +4,7 @@ version: 2
 sources:
   - name: jaffle_shop
     description: Jaffle shop data.
-    database: ramiz_bozai_sandbox_dev
+    database: raw
     schema: jaffle_shop
     tables:
       - name: orders
