@@ -35,6 +35,14 @@ vars:
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
+snapshots:
+    +snapshot_meta_column_names:
+      dbt_valid_from: valid_cac_time_from
+      dbt_valid_to: valid_cac_time_to
+      dbt_scd_id: scd_id_name
+      dbt_updated_at: up_at_custom
+
+
 
 models:
   ramiz_snowflake_github_demo:
