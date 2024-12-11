@@ -9,6 +9,10 @@ packages:
     version: 0.8.5
   - package: dbt-labs/audit_helper
     version: 0.11.0
+  - package: AxelThevenot/dbt_assertions
+    version: 1.4.0
+  - package: brooklyn-data/dbt_artifacts
+    version: 2.7.0
   - package: calogica/dbt_date
     version: 0.8.1
-sha1_hash: 61f61f1c429510ce78b44e8513145bb9b666c7c2
+sha1_hash: 967f67f0f31f729190bed41f39c1fec313e9c400
