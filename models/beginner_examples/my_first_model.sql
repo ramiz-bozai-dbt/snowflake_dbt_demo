@@ -2,8 +2,6 @@
 --This is my very first model.
 
 select
-    *,
-    1 as test,
     case
         when age between 20 and 23 then '20-23'
         when age between 24 and 28 then '24-28'
