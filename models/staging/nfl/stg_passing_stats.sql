@@ -9,6 +9,7 @@ with source as (
 renamed as (
 
     select
+        1 as test,
         md5(year || player) as id,
         tm as team,
         age,
