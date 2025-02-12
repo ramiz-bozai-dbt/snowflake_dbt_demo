@@ -1,6 +1,8 @@
 name: Run Modified Job on Merge
 
 on:
+  workflow_dispatch:
+  
   pull_request:
     types:
       - opened
