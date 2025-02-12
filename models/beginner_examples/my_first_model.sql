@@ -9,8 +9,7 @@ select
         when age between 29 and 40 then '29-40'
         when age >= 41 then '40+'
     end
-        as age_bucket,
-    location
+        as age_bucket
     
 
 
