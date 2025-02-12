@@ -1,6 +1,8 @@
-name: Run Modified Job on Merge
+name: Testing Slim CI via GH
 
 on:
+  workflow_dispatch:
+  
   pull_request:
     types:
       - opened
@@ -19,7 +21,7 @@ jobs:
         with:
           python-version: "3.9.x"
 
-      - name: Restart Job from Failure
+      - name: testingslimci
         run: |
           pip install dbtc==0.2.2
           dbtc trigger-job \
