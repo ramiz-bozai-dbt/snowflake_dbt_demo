@@ -1,0 +1,20 @@
+name: Run Modified Job on Merge
+
+on:
+  pull_request:
+    types:
+      - opened
+  
+jobs:
+  try_slim_ci_gh:
+    runs-on: ubuntu-latest
+    env:
+      DBT_CLOUD_SERVICE_TOKEN: ${{ secrets.DBT_CLOUD_JOB_ADMIN }}
+      DBT_CLOUD_ACCOUNT_ID: 81398
+      JOB_ID: 451928
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: "3.9.x"
