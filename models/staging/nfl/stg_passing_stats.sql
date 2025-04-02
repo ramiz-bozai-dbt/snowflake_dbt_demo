@@ -3,7 +3,7 @@
 with source as (
 
     --We are using jinja here. --
-    select * from nfl_data.public.passing_stats
+    select * from {{ source('nfl', 'passing_stats') }}
 
 ),
 --
