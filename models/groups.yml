@@ -1,0 +1,8 @@
+version: 2
+
+groups:
+  - name: nfl_owners
+    owner:
+      # Email is required to receive model-level notifications, additional properties are also allowed.
+      name: "Football nerds who work on NFL data pipelines"
+      email: ramiz.bozai@dbtlabs.com
