@@ -57,7 +57,7 @@ models:
     staging:
       account_usage:
         +materialized: view
-        +schema: stg_account_usage            
+        +schema: stg_account_usage  
       mls:
         +materialized: view  
         +schema: stg_mls        
@@ -66,4 +66,5 @@ models:
         +materialized: view  
         +schema: stg_nfl        
         +tags: ['sports']    
+        +group: nfl_owners
  

@@ -1,3 +1,4 @@
+
 --This is my very first model.
 
 select
@@ -9,6 +10,7 @@ select
         when age >= 41 then '40+'
     end
         as age_bucket
+        
 
 
 
