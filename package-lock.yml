@@ -1,16 +1,26 @@
 packages:
-  - package: dbt-labs/codegen
+  - name: codegen
+    package: dbt-labs/codegen
     version: 0.10.0
-  - package: dbt-labs/dbt_utils
+  - name: dbt_utils
+    package: dbt-labs/dbt_utils
     version: 1.1.1
-  - package: calogica/dbt_expectations
+  - name: dbt_expectations
+    package: calogica/dbt_expectations
     version: 0.9.0
-  - package: dbt-labs/dbt_external_tables
+  - name: dbt_external_tables
+    package: dbt-labs/dbt_external_tables
     version: 0.8.5
-  - package: dbt-labs/audit_helper
+  - name: audit_helper
+    package: dbt-labs/audit_helper
     version: 0.11.0
-  - package: AxelThevenot/dbt_assertions
+  - name: dbt_assertions
+    package: AxelThevenot/dbt_assertions
     version: 1.4.0
-  - package: calogica/dbt_date
+  - name: dbt_artifacts
+    package: brooklyn-data/dbt_artifacts
+    version: 2.9.3
+  - name: dbt_date
+    package: calogica/dbt_date
     version: 0.8.1
-sha1_hash: 6ee0b065fee0391a60eb135bd3c16f5e5f5c066e
+sha1_hash: a8976baf7ba4ae1f629d7b77c972c8bf690294fa
