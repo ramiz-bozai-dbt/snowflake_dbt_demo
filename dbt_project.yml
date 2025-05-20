@@ -45,28 +45,29 @@ vars:
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
 models:
-  dbt_artifacts:
-    enabled: false
-  
-  beginner_examples:
-    +materialized: table
-    +schema: beginner_examples
+  ramiz_snowflake_github_demo:
+    dbt_artifacts:
+      +enabled: false
+    
+    beginner_examples:
+      +materialized: table
+      +schema: beginner_examples
 
-  sports:
-    +materialized: table
-    +schema: sports                           
+    sports:
+      +materialized: table
+      +schema: sports                           
 
-  staging:
-    account_usage:
-      +materialized: view
-      +schema: stg_account_usage  
-    mls:
-      +materialized: view  
-      +schema: stg_mls        
-      +tags: ['sports']          
-    nfl:
-      +materialized: view  
-      +schema: stg_nfl        
-      +tags: ['sports']    
-      +group: nfl_owners
+    staging:
+      account_usage:
+        +materialized: view
+        +schema: stg_account_usage  
+      mls:
+        +materialized: view  
+        +schema: stg_mls        
+        +tags: ['sports']          
+      nfl:
+        +materialized: view  
+        +schema: stg_nfl        
+        +tags: ['sports']    
+        +group: nfl_owners
  
