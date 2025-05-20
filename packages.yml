@@ -11,3 +11,5 @@ packages:
     version: 0.11.0    
   - package: AxelThevenot/dbt_assertions
     version: 1.4.0
+  - package: brooklyn-data/dbt_artifacts
+    version: 2.9.3    
