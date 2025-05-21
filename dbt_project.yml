@@ -33,8 +33,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 on-run-start:
   - '{{create_udfs()}}'
 
-# on-run-end:
-#  - "{{ dbt_artifacts.upload_results(results) }}"
+on-run-end:
+  - "{{ dbt_artifacts.upload_results(results) }}"
 
 vars:
   start_date: '1999-01-01'
@@ -45,10 +45,19 @@ vars:
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
 models:
+  dbt_artifacts:
+    +enabled: true
+    sources:
+      exposures:
+        enabled: false
+    staging:
+      stg_dbt__exposures:
+        enabled: false
+    dim_dbt__exposures:
+      enabled: false
+
+
   ramiz_snowflake_github_demo:
-    dbt_artifacts:
-      +enabled: false
-    
     beginner_examples:
       +materialized: table
       +schema: beginner_examples
