@@ -17,10 +17,10 @@ packages:
   - name: dbt_assertions
     package: AxelThevenot/dbt_assertions
     version: 1.4.0
-  - name: dbt_artifacts
-    package: brooklyn-data/dbt_artifacts
-    version: 2.9.3
+  - name: elementary
+    package: elementary-data/elementary
+    version: 0.18.3
   - name: dbt_date
     package: calogica/dbt_date
     version: 0.8.1
-sha1_hash: a8976baf7ba4ae1f629d7b77c972c8bf690294fa
+sha1_hash: 80a45ae8e17d6da3926eb51fc9f410b412238771

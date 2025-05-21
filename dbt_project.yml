@@ -33,9 +33,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 on-run-start:
   - '{{create_udfs()}}'
 
-on-run-end:
-  - "{{ dbt_artifacts.upload_results(results) }}"
-
 vars:
   start_date: '1999-01-01'
   test: 'false' # to trigger runs for unit testing - override in a CLI param in testing job
@@ -45,18 +42,6 @@ vars:
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
 models:
-  dbt_artifacts:
-    +enabled: true
-    sources:
-      exposures:
-        enabled: false
-    staging:
-      stg_dbt__exposures:
-        enabled: false
-    dim_dbt__exposures:
-      enabled: false
-
-
   ramiz_snowflake_github_demo:
     beginner_examples:
       +materialized: table
