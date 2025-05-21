@@ -33,7 +33,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 on-run-start:
   - '{{create_udfs()}}'
 
-# on-run-end:
+on-run-end:
   - "{{ dbt_artifacts.upload_results(results) }}"
 
 vars:
