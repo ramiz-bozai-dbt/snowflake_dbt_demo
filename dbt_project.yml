@@ -46,15 +46,15 @@ vars:
 
 models:
   dbt_artifacts:
-    +enabled: false
+    +enabled: true
     sources:
-      model_executions:
-        enabled: true
+      exposures:
+        enabled: false
     staging:
-      stg_dbt__model_executions:
-        enabled: true
-    fct_dbt__model_executions:
-      enabled: true
+      stg_dbt__exposures:
+        enabled: false
+    dim_dbt__exposures:
+      enabled: false
 
 
   ramiz_snowflake_github_demo:
