@@ -1,0 +1,73 @@
+semantic_models:
+- name: top_performers
+  description: Top performers in NBA playoffs 2025 with points greater than 15 per
+    game.
+  model: ref('top_performers')
+  defaults:
+    agg_time_dimension: game_date
+  entities:
+  - name: player
+    type: primary
+    expr: player_id
+  - name: team
+    type: foreign
+    expr: team_id
+  dimensions:
+  - name: game_date
+    type: time
+    type_params:
+      time_granularity: day
+  - name: name
+    expr: player_name
+    type: categorical
+  - name: team_name
+    type: categorical
+  - name: position
+    type: categorical
+  - name: is_starter
+    type: categorical
+  measures:
+  - name: points
+    description: Total points scored by the player.
+    agg: sum
+    create_metric: true
+  - name: assists
+    description: Total assists made by the player.
+    agg: sum
+    create_metric: true
+  - name: rebounds
+    description: Total rebounds by the player.
+    agg: sum
+    create_metric: true
+  - name: steals
+    description: Total steals by the player.
+    agg: sum
+    create_metric: true
+  - name: blocks
+    description: Total blocks by the player.
+    agg: sum
+    create_metric: true
+  - name: turnovers
+    description: Total turnovers by the player.
+    agg: sum
+    create_metric: true
+  - name: field_goal_percentage
+    description: Field goal percentage of the player.
+    agg: average
+    create_metric: true
+  - name: three_point_percentage
+    description: Three-point percentage of the player.
+    agg: average
+    create_metric: true
+  - name: free_throw_percentage
+    description: Free throw percentage of the player.
+    agg: average
+    create_metric: true
+  - name: count_player
+    agg: count
+    create_metric: true
+    expr: player_id
+  - name: count_team
+    agg: count_distinct
+    create_metric: true
+    expr: team_id
