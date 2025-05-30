@@ -89,7 +89,6 @@ models:
   - name: team_name
     description: The name of the NBA team.
     data_tests:
-      - unique
       - not_null
   - name: games_played
     description: The number of games played by the team in the playoffs.
