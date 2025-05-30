@@ -1,0 +1,141 @@
+version: 2
+models:
+- name: stg_nba__player_stats_per_game_playoffs_2025
+  description: This model provides detailed statistics for NBA players during the
+    2025 playoffs, aggregated on a per-game basis. It includes various performance
+    metrics such as points, rebounds, assists, and shooting percentages, which are
+    essential for analyzing player performance and team strategies.
+  columns:
+  - name: id
+    description: Unique ID.
+    data_tests:
+      - unique
+  - name: player_name
+    description: The name of the player.
+    data_tests:
+      - unique    
+  - name: position
+    description: The position the player plays in.
+  - name: age
+    description: The age of the player during the playoffs.
+  - name: team
+    description: The team the player is part of.
+  - name: games_played
+    description: The number of games the player participated in during the playoffs.
+  - name: games_started
+    description: The number of games the player started during the playoffs.
+  - name: minutes_played
+    description: The total minutes the player was on the court during the playoffs.
+  - name: field_goals_made
+    description: The total number of field goals made by the player.
+  - name: field_goals_attempted
+    description: The total number of field goals attempted by the player.
+  - name: field_goal_pct
+    description: The percentage of field goals made out of those attempted.
+  - name: three_pointers_made
+    description: The total number of three-point shots made by the player.
+  - name: three_pointers_attempted
+    description: The total number of three-point shots attempted by the player.
+  - name: three_point_pct
+    description: The percentage of three-point shots made out of those attempted.
+  - name: two_pointers_made
+    description: The total number of two-point shots made by the player.
+  - name: two_pointers_attempted
+    description: The total number of two-point shots attempted by the player.
+  - name: two_point_pct
+    description: The percentage of two-point shots made out of those attempted.
+  - name: effective_field_goal_pct
+    description: The player's shooting efficiency, accounting for the fact that a
+      three-point field goal is worth more than a two-point field goal.
+  - name: free_throws_made
+    description: The total number of free throws made by the player.
+  - name: free_throws_attempted
+    description: The total number of free throws attempted by the player.
+  - name: free_throw_pct
+    description: The percentage of free throws made out of those attempted.
+  - name: offensive_rebounds
+    description: The total number of offensive rebounds secured by the player.
+  - name: defensive_rebounds
+    description: The total number of defensive rebounds secured by the player.
+  - name: total_rebounds
+    description: The total number of rebounds (offensive and defensive) secured by
+      the player.
+  - name: assists
+    description: The total number of assists made by the player.
+  - name: steals
+    description: The total number of steals made by the player.
+  - name: blocks
+    description: The total number of blocks made by the player.
+  - name: turnovers
+    description: The total number of turnovers committed by the player.
+  - name: personal_fouls
+    description: The total number of personal fouls committed by the player.
+  - name: points
+    description: The total number of points scored by the player.
+  - name: loaded_at
+    description: The timestamp when the data was loaded.
+    data_tests:
+      - not_null
+
+- name: stg_nba__team_stats_per_game_playoffs_2025
+  description: This model provides detailed statistics for NBA teams during the 2025
+    playoffs, focusing on per-game performance metrics. It includes various shooting,
+    rebounding, and defensive statistics to analyze team performance.
+  columns:
+  - name: ID
+    description: Unique identifier.
+    data_tests:
+      - unique
+  - name: team_name
+    description: The name of the NBA team.
+    data_tests:
+      - unique
+      - not_null
+  - name: games_played
+    description: The number of games played by the team in the playoffs.
+  - name: minutes_played
+    description: The total minutes played by the team in the playoffs.
+  - name: field_goals_made
+    description: The number of field goals successfully made by the team.
+  - name: field_goals_attempted
+    description: The number of field goals attempted by the team.
+  - name: field_goal_pct
+    description: The percentage of successful field goals made by the team.
+  - name: three_pointers_made
+    description: The number of three-point shots successfully made by the team.
+  - name: three_pointers_attempted
+    description: The number of three-point shots attempted by the team.
+  - name: three_point_pct
+    description: The percentage of successful three-point shots made by the team.
+  - name: two_pointers_made
+    description: The number of two-point shots successfully made by the team.
+  - name: two_pointers_attempted
+    description: The number of two-point shots attempted by the team.
+  - name: two_point_pct
+    description: The percentage of successful two-point shots made by the team.
+  - name: free_throws_made
+    description: The number of free throws successfully made by the team.
+  - name: free_throws_attempted
+    description: The number of free throws attempted by the team.
+  - name: free_throw_pct
+    description: The percentage of successful free throws made by the team.
+  - name: offensive_rebounds
+    description: The number of offensive rebounds secured by the team.
+  - name: defensive_rebounds
+    description: The number of defensive rebounds secured by the team.
+  - name: total_rebounds
+    description: The total number of rebounds secured by the team.
+  - name: assists
+    description: The number of assists made by the team.
+  - name: steals
+    description: The number of steals made by the team.
+  - name: blocks
+    description: The number of blocks made by the team.
+  - name: turnovers
+    description: The number of turnovers committed by the team.
+  - name: personal_fouls
+    description: The number of personal fouls committed by the team.
+  - name: points
+    description: The total points scored by the team.
+  - name: loaded_at
+    description: The timestamp when the data was loaded.
