@@ -64,4 +64,8 @@ models:
         +schema: stg_nfl        
         +tags: ['sports']    
         +group: nfl_owners
+      nba:
+        +materialized: view  
+        +schema: stg_nba      
+        +tags: ['sports']       
  
