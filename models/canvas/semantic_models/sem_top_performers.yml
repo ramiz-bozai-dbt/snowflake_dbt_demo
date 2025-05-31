@@ -4,28 +4,22 @@ semantic_models:
     game.
   model: ref('top_performers')
   defaults:
-    agg_time_dimension: game_date
+    agg_time_dimension: measure_time
   entities:
-  - name: player
+  - name: player_name
     type: primary
-    expr: player_id
+    expr: player_name
   - name: team
     type: foreign
-    expr: team_id
+    expr: team
   dimensions:
-  - name: game_date
-    type: time
-    type_params:
-      time_granularity: day
-  - name: name
-    expr: player_name
-    type: categorical
-  - name: team_name
-    type: categorical
   - name: position
     type: categorical
-  - name: is_starter
-    type: categorical
+  - name: measure_time
+    expr: 'current_date'
+    type: time
+    type_params:
+      time_granularity: day     
   measures:
   - name: points
     description: Total points scored by the player.
@@ -51,15 +45,15 @@ semantic_models:
     description: Total turnovers by the player.
     agg: sum
     create_metric: true
-  - name: field_goal_percentage
+  - name: field_goal_pct
     description: Field goal percentage of the player.
     agg: average
     create_metric: true
-  - name: three_point_percentage
+  - name: three_point_pct
     description: Three-point percentage of the player.
     agg: average
     create_metric: true
-  - name: free_throw_percentage
+  - name: free_throw_pct
     description: Free throw percentage of the player.
     agg: average
     create_metric: true
