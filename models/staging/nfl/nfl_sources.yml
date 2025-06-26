@@ -5,10 +5,11 @@ sources:
     description: NFL data from the 2021 season.
     database: nfl_data
     schema: public
-    freshness: # default freshness
-      warn_after: { count: 5, period: day }
-      error_after: { count: 1000, period: day }
-    loaded_at_field: loaded_at
+    config:
+      freshness: # default freshness
+        warn_after: { count: 5, period: day }
+        error_after: { count: 1000, period: day }
+      loaded_at_field: loaded_at
 
     tables:
       - name: passing_stats
