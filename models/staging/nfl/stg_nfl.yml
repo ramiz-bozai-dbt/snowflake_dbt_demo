@@ -7,29 +7,29 @@ models:
       - name: id
         description: A hashed, unique identifier of season year and player name.
         data_tests:
-            - unique
+          - unique
       - name: season_year
         description: Season of record.
         data_tests:
-            - not_null
-      
+          - not_null
+
       - name: player_name
         description: Name of player.
         data_tests:
-            - not_null
-            - dbt_expectations.expect_column_to_exist
+          - not_null
+          - dbt_expectations.expect_column_to_exist
 
       - name: team
         description: The team the player was on that year.
         data_tests:
-            - not_null    
-            - dbt_utils.at_least_one:
+          - not_null
+          - dbt_utils.at_least_one:
+              config:
                 where: "team = 'KAN'"
-
       - name: age
         description: Age of player at season end.
         data_tests:
-            - not_null
+          - not_null
 
       - name: position
         description: Default player position.

@@ -1,4 +1,3 @@
-
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
@@ -9,7 +8,7 @@ config-version: 2
 
 
 dbt-cloud:
-    project-id: 125397
+  project-id: 125397
 
 # This setting configures which "profile" dbt uses for this project.
 profile: 'ramiz_snowflake_github_demo'
@@ -23,12 +22,10 @@ test-paths: ["tests"]
 seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
-
-target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
-    - "target"
-    - "dbt_modules"
-    - "dbt_packages"
+  - "target"
+  - "dbt_modules"
+  - "dbt_packages"
 
 on-run-start:
   - '{{create_udfs()}}'
@@ -55,23 +52,22 @@ models:
 
     sports:
       +materialized: table
-      +schema: sports                           
+      +schema: sports
 
     staging:
       account_usage:
         +materialized: view
-        +schema: stg_account_usage  
+        +schema: stg_account_usage
       mls:
-        +materialized: view  
-        +schema: stg_mls        
-        +tags: ['sports']          
+        +materialized: view
+        +schema: stg_mls
+        +tags: ['sports']
       nfl:
-        +materialized: view  
-        +schema: stg_nfl        
-        +tags: ['sports']    
+        +materialized: view
+        +schema: stg_nfl
+        +tags: ['sports']
         +group: nfl_owners
       nba:
-        +materialized: view  
-        +schema: stg_nba      
-        +tags: ['sports']       
- 
+        +materialized: view
+        +schema: stg_nba
+        +tags: ['sports']
