@@ -5,12 +5,11 @@ sources:
     description: MLS data from the 2022 season.
     database: mls_data
     schema: public
-    freshness: # default freshness
-      warn_after: {count: 700, period: day}
-      error_after: {count: 1000, period: day}
-    loaded_at_field: loaded_at    
-    
-
     tables:
       - name: shooting_stats
         description: Shooting data from the 2022 season.
+    config:
+      freshness: # default freshness
+        warn_after: {count: 700, period: day}
+        error_after: {count: 1000, period: day}
+      loaded_at_field: loaded_at
