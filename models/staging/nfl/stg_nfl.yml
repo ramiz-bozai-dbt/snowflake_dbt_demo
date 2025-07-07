@@ -19,6 +19,10 @@ models:
           - not_null
           - dbt_expectations.expect_column_to_exist
 
+        config:
+          tags: ['contains_pii']
+          meta:
+            contains_pii: true
       - name: team
         description: The team the player was on that year.
         data_tests:
