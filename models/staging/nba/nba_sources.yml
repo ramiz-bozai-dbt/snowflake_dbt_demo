@@ -10,3 +10,9 @@ sources:
         warn_after: { count: 5, period: day }
         error_after: { count: 1000, period: day }
       loaded_at_field: loaded_at
+
+    tables:
+      - name: player_stats_per_game_playoffs_2025
+        description: Player stats per game data from the 2025 playoffs.
+      - name: team_stats_per_game_playoffs_2025
+        description: Team stats per game data from the 2025 playoffs.        
