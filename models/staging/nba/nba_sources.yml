@@ -9,7 +9,7 @@ sources:
       freshness: # default freshness
         warn_after: { count: 5, period: day }
         error_after: { count: 1000, period: day }
-      loaded_at_field: loaded_at
+        loaded_at_field: loaded_at
 
     tables:
       - name: player_stats_per_game_playoffs_2025
