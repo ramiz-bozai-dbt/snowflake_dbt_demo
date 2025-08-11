@@ -12,7 +12,7 @@ renamed as (
     select
         md5(year || player) as id, -- --
         tm as team,
-        age,
+        age, --
         pos as position,
         cmp as completions,
         att as attempts,
