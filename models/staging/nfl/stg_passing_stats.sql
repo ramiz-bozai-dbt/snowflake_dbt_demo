@@ -10,8 +10,9 @@ with source as (
 renamed as (
 
     select
+        1 as test,
         md5(year || player) as id, -- --
-        tm as team,
+        tm as team, 
         age, --
         pos as position,
         cmp as completions,
