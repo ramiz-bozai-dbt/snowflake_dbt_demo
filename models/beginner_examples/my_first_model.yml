@@ -1,0 +1,6 @@
+version: 2
+models:
+  - name: my_first_model
+    columns:
+      - name: completions
+        description: Number of passing completions edited later to show an example.
